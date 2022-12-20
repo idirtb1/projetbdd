@@ -108,10 +108,10 @@
 			}
 			$concert = $_POST["avis"];
 			$mess = $_POST["mess"];
-
-			$connexion=mysqli_connect("localhost", "root", "root") ;
+			
+			$connexion=mysqli_connect("localhost", "root", "") ;
 			mysqli_select_db($connexion,"projet");
-			$req='INSERT INTO avis (ContenuAvis, DateAvis, IdUser, IdConcert) VALUES ("'.$mess.'", "'.date("Y/m/d H:i:s").'", "'.$_SESSION['ID'].'","'.$concert.'");';
+			$req='INSERT INTO avis (ContenuAvis, DateAvis, IdUser, IdConcert) VALUES ("'.$mess.'", "'.date("Y/m/d H:i:s").'", "'.$_SESSION['ID'].'","'.$concert.'");'; 
 			mysqli_query($connexion, $req);
 			mysqli_close($connexion) ;
 			echo "Votre avis a bien été posté.<br/>";

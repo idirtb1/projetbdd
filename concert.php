@@ -144,7 +144,7 @@
               <tr><th>Artiste</th><th>Date</th><th>Lieu</th><th>Voir les Photos</th><th>Voir les Avis</th></tr>
              
               <?php
-                  $connexion=mysqli_connect("localhost", "root", "root");
+                  $connexion=mysqli_connect("localhost", "root", "");
                   mysqli_select_db($connexion,"projet");
                   $req='SELECT * FROM concerts;';
                   $res=mysqli_query($connexion, $req);

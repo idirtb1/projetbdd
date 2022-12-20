@@ -114,7 +114,7 @@
 				<center>
 				<table width="90%" border="1">
 				<?php
-                $connexion=mysqli_connect("localhost", "root", "root") ;
+                $connexion=mysqli_connect("localhost", "root", "") ;
 				mysqli_select_db($connexion,"projet");
 				$req='SELECT* FROM concerts, artistes WHERE concerts.IdArtiste='.$nom_artiste.' GROUP BY IdConcert ;';
 				$res=mysqli_query($connexion, $req);

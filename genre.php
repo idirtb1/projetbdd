@@ -150,7 +150,7 @@
   <table>
 			<tr><th>Genre</th><th>Description</th></tr>
 			<?php
-                $connexion=mysqli_connect("localhost", "root", "root");
+                $connexion=mysqli_connect("localhost", "root", "");
 				mysqli_select_db($connexion,"projet");
 				$req='SELECT * FROM genres;';
 				$res=mysqli_query($connexion, $req);

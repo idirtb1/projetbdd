@@ -79,7 +79,7 @@
 		   if (!empty($_POST["pseudo"]) and !empty($_POST["pass"])) {
 			   $pseudo = $_POST["pseudo"];
 			   $pass = $_POST["pass"];
-			   $connexion=mysqli_connect("localhost", "root", "root") ;
+			   $connexion=mysqli_connect("localhost", "root", "") ;
 			   mysqli_select_db($connexion,"projet");
 			   $req= 'SELECT Pseudo, IdUser FROM utilisateurs WHERE Pseudo="'.$pseudo.'" AND Password="'.$pass.'";';
 			   $res=mysqli_query($connexion, $req); 

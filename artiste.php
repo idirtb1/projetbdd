@@ -115,7 +115,7 @@
 		<tr><th>Artiste</th><th>Description</th><th>Genre</th><th>Concert</th></tr>
            
 			<?php
-                $connexion=mysqli_connect("localhost", "root", "root");
+                $connexion=mysqli_connect("localhost", "root", "");
 				mysqli_select_db($connexion,"projet");
 				$req='SELECT * FROM artistes;';
 				$res=mysqli_query($connexion, $req);

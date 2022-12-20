@@ -107,14 +107,14 @@
 <?php
 
      
-		$connexion=mysqli_connect("localhost", "root", "root") ;
+		$connexion=mysqli_connect("localhost", "root", "") ;
 		mysqli_select_db($connexion,"projet");
 		$req='SELECT* FROM photos, concerts WHERE photos.IdConcert='.$num.';';
 		$res=mysqli_query($connexion, $req); 
 		while ($enreg_photo=mysqli_fetch_array($res)){
 			$user=$enreg_photo['IdUser'];
 			$photo=$enreg_photo['NomPhoto'];
-			echo '<tr><td align="center">'.$user.'</td><td align="center"><br/><img width="100px" height="100px" src="photoconcert/'.$photo.'"/><br/></tr></td>';
+			echo '<tr><td align="center">'.$user.'</td><td align="center"><br/><img width="100px" height="100px" src="photoconcert/'.$photo.'"/><br/></tr></td>';				
 		}			
 								
 		mysqli_close($connexion) ;

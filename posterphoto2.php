@@ -90,7 +90,7 @@
 			}
 			$concert = $_POST["photo"];
 			
-			$connexion=mysqli_connect("localhost", "root", "root") ;
+			$connexion=mysqli_connect("localhost", "root", "") ;
 			mysqli_select_db($connexion,"projet");
 			$req='INSERT INTO photos (NomPhoto, IdUser, IdConcert) VALUES ("'.$_FILES['nom_du_fichier']['name'].'","'.$_SESSION['ID'].'","'.$concert.'");'; 
 			mysqli_query($connexion, $req);

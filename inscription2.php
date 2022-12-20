@@ -109,8 +109,8 @@
 						move_uploaded_file($_FILES['nom_du_fichier']['tmp_name'],
 						$chemin_destination.$_FILES['nom_du_fichier']['name']);
 					}
-					echo 'Votre pseudo est '.$pseudo.' avec le mot de passe '.$pass1.' et votre mail est '.$mail.'.';$connexion=mysqli_connect("localhost", "root", "root") ;
-					$connexion=mysqli_connect("localhost", "root", "root") ;
+					echo 'Votre pseudo est '.$pseudo.' avec le mot de passe '.$pass1.' et votre mail est '.$mail.'.';$connexion=mysqli_connect("localhost", "root", "") ;
+					$connexion=mysqli_connect("localhost", "root", "") ;
 					mysqli_select_db($connexion,"projet");
 					$req= 'INSERT INTO utilisateurs (Pseudo, Password, Mail, Admin, Avatar) VALUES ("'.$pseudo.'", "'.$pass1.'", "'.$mail.'", "Non", "'.$_FILES['nom_du_fichier']['name'].'");';
 					mysqli_query($connexion, $req);

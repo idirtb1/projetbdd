@@ -110,9 +110,9 @@
 		<center>
 		<table width="90%" border="1">
 		<?php
-		        $connexion=mysqli_connect("localhost", "root", "root") ;
+		        $connexion=mysqli_connect("localhost", "root", "") ;
 				mysqli_select_db($connexion,"projet");
-				$req='SELECT  a.IdAvis, a.ContenuAvis , a.DateAvis FROM avis a, concerts, utilisateurs WHERE avis.IdAvis='.$num.' GROUP BY IdAvis;';
+				$req='SELECT* FROM avis, concerts, utilisateurs WHERE avis.IdConcert='.$num.' GROUP BY IdAvis;';
 				$res=mysqli_query($connexion, $req);
 				while ($enreg_artiste=mysqli_fetch_array($res)){
 					$user=$enreg_artiste['Pseudo'];
