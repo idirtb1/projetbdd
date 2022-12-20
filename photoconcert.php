@@ -91,7 +91,7 @@
 	</style>
 
 
-<?php 
+<?php
 	if (isset($_GET["concert"])) {
 		$num = $_GET["concert"] ;
 	}
@@ -109,7 +109,7 @@
      
 		$connexion=mysqli_connect("localhost", "root", "") ;
 		mysqli_select_db($connexion,"projet");
-		$req='SELECT* FROM photos, concerts WHERE photos.IdConcert='.$num.';';
+		$req='SELECT * FROM photos WHERE photos.IdConcert='.$num.';';
 		$res=mysqli_query($connexion, $req); 
 		while ($enreg_photo=mysqli_fetch_array($res)){
 			$user=$enreg_photo['IdUser'];
